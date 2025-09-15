@@ -46,8 +46,12 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
       </div>
 
-      {/* Animated background elements */}
+      {/* Floating glass elements */}
       <div className="absolute inset-0 overflow-hidden">
+        <div className="floating-glass w-20 h-20 top-20 left-10"></div>
+        <div className="floating-glass w-16 h-16 top-40 right-20"></div>
+        <div className="floating-glass w-12 h-12 bottom-40 left-1/4"></div>
+        <div className="floating-glass w-24 h-24 bottom-20 right-1/4"></div>
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-secondary/30 rounded-full animate-pulse"></div>
         <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-secondary/50 rounded-full animate-pulse animate-delay-500"></div>
         <div className="absolute bottom-1/3 left-1/5 w-1.5 h-1.5 bg-secondary/40 rounded-full animate-pulse animate-delay-1000"></div>
