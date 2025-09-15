@@ -78,18 +78,20 @@ export function HeroSection() {
           </p>
         </div>
 
-        <p 
+        <div 
           ref={descriptionRef}
-          className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-pretty opacity-0"
+          className="glass-container p-8 mb-8 max-w-2xl mx-auto opacity-0"
         >
-          Odkryj świat luksusowego fryzjerstwa, gdzie każda wizyta to wyjątkowe doświadczenie inspirowane najnowszymi
-          trendami z wybiegów mody.
-        </p>
+          <p className="text-lg md:text-xl leading-relaxed text-pretty">
+            Odkryj świat luksusowego fryzjerstwa, gdzie każda wizyta to wyjątkowe doświadczenie inspirowane najnowszymi
+            trendami z wybiegów mody.
+          </p>
+        </div>
 
         <Button
           ref={buttonRef}
           size="lg"
-          className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 text-lg font-medium tracking-wide opacity-0 hover:scale-105 transition-transform duration-300"
+          className="glass-button px-8 py-3 text-lg font-medium tracking-wide opacity-0"
         >
           Umów wizytę
         </Button>
