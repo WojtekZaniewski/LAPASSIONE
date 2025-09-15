@@ -32,7 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className="scroll-smooth">
-      <body className={`font-sans ${inter.variable} ${crimsonText.variable} antialiased`}>
+      <body className={`font-sans ${inter.variable} ${crimsonText.variable} antialiased relative`}>
+        {/* Background glass elements */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="floating-glass w-32 h-32 top-1/4 left-1/4 opacity-30"></div>
+          <div className="floating-glass w-24 h-24 top-3/4 right-1/3 opacity-20"></div>
+          <div className="floating-glass w-40 h-40 bottom-1/4 left-1/2 opacity-25"></div>
+          <div className="floating-glass w-16 h-16 top-1/2 right-1/4 opacity-35"></div>
+        </div>
+        
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
