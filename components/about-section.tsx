@@ -21,32 +21,53 @@ export function AboutSection() {
   })
 
   return (
-    <section ref={sectionRef} className="py-20 bg-card opacity-0">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section ref={sectionRef} className="section-modern bg-white opacity-0">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div ref={textRef} className="opacity-0">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground">
-              Filozofia Piękna
-            </h2>
-            <div className="w-16 h-px bg-secondary mb-8"></div>
-            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-              W La Passione wierzymy, że fryzjerstwo to sztuka, która łączy technikę z kreatywnością. Nasz zespół
-              ekspertów czerpie inspirację z najnowszych trendów haute couture, tworząc unikalne stylizacje dopasowane
-              do Twojej osobowości.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Każda wizyta w naszym salonie to podróż przez świat luksusu i elegancji, gdzie dbałość o detale spotyka
-              się z najwyższą jakością obsługi.
-            </p>
+            <div className="mb-8">
+              <span className="text-sm font-medium tracking-widest uppercase text-black/60 mb-4 block">
+                About Us
+              </span>
+              <h2 className="heading-2 text-black mb-8">
+                HELPING BRANDS<br />
+                MOVE THE WORLD<br />
+                <span className="text-black/40">FORWARD</span>
+              </h2>
+            </div>
+            
+            <div className="space-y-6 text-lg leading-relaxed text-black/70">
+              <p>
+                W La Passione wierzymy, że fryzjerstwo to sztuka, która łączy technikę z kreatywnością. Nasz zespół
+                ekspertów czerpie inspirację z najnowszych trendów haute couture, tworząc unikalne stylizacje dopasowane
+                do Twojej osobowości.
+              </p>
+              <p>
+                Każda wizyta w naszym salonie to podróż przez świat luksusu i elegancji, gdzie dbałość o detale spotyka
+                się z najwyższą jakością obsługi.
+              </p>
+            </div>
+
+            <div className="mt-12">
+              <button className="btn-modern">
+                Dowiedz się więcej
+              </button>
+            </div>
           </div>
+          
           <div ref={imageRef} className="relative opacity-0">
-            <img
-              src="/luxury-hair-salon-interior-modern-elegant-design-w.jpg"
-              alt="Wnętrze salonu La Passione"
-              className="w-full h-auto rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-secondary/10 rounded-full blur-lg animate-pulse animate-delay-500"></div>
+            <div className="relative group">
+              <img
+                src="/luxury-hair-salon-interior-modern-elegant-design-w.jpg"
+                alt="Wnętrze salonu La Passione"
+                className="w-full h-[600px] object-cover hover-lift"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
+            </div>
+            
+            {/* Modern geometric overlays */}
+            <div className="absolute -top-8 -right-8 w-24 h-24 border border-black/10 rounded-full"></div>
+            <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-black/5 rounded-full"></div>
           </div>
         </div>
       </div>

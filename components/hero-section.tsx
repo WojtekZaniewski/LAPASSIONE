@@ -34,72 +34,82 @@ export function HeroSection() {
   })
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with parallax effect */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Background Image with modern overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/elegant-fashion-model-with-perfect-hairstyle-in-lu.jpg')`,
         }}
       >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/40 to-black/90" />
       </div>
 
-      {/* Animated background elements */}
+      {/* Modern geometric elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-secondary/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-secondary/50 rounded-full animate-pulse animate-delay-500"></div>
-        <div className="absolute bottom-1/3 left-1/5 w-1.5 h-1.5 bg-secondary/40 rounded-full animate-pulse animate-delay-1000"></div>
+        <div className="absolute top-20 right-20 w-32 h-32 border border-white/10 rounded-full animate-float"></div>
+        <div className="absolute bottom-32 left-16 w-16 h-16 border border-white/5 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-white/5 rounded-full animate-pulse"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <div className="mb-8">
+      {/* Content - Inertia Studios inspired layout */}
+      <div className="relative z-10 text-center text-white px-6 max-w-7xl mx-auto">
+        {/* Main heading with bold typography */}
+        <div className="mb-16">
           <h1 
             ref={titleRef}
-            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0"
+            className="heading-1 mb-8 opacity-0"
           >
-            La Passione
+            LA <span className="text-white/60">PASSIONE</span>
           </h1>
+          
           <div 
             ref={subtitleRef}
-            className="w-24 h-px bg-secondary mx-auto mb-6 opacity-0"
-          ></div>
-          <p 
-            ref={subtitleRef}
-            className="text-xl md:text-2xl font-light tracking-wide text-balance opacity-0"
+            className="text-display text-2xl md:text-3xl lg:text-4xl font-light tracking-widest uppercase mb-8 opacity-0"
           >
-            Twoje włosy, Twoja pasja
+            Moving Hair, Brands and Visual Culture
+          </div>
+        </div>
+
+        {/* Description with modern typography */}
+        <div 
+          ref={descriptionRef}
+          className="max-w-4xl mx-auto mb-16 opacity-0"
+        >
+          <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-white/80 mb-8">
+            A creative <strong className="text-white font-medium">hair studio</strong><br />
+            Setting brands <strong className="text-white font-medium">in motion</strong>
+          </p>
+          
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
+            Odkryj świat luksusowego fryzjerstwa, gdzie każda wizyta to wyjątkowe doświadczenie inspirowane najnowszymi trendami z wybiegów mody.
           </p>
         </div>
 
-        <p 
-          ref={descriptionRef}
-          className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-pretty opacity-0"
-        >
-          Odkryj świat luksusowego fryzjerstwa, gdzie każda wizyta to wyjątkowe doświadczenie inspirowane najnowszymi
-          trendami z wybiegów mody.
-        </p>
-
-        <Button
+        {/* Modern CTA buttons */}
+        <div 
           ref={buttonRef}
-          size="lg"
-          className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 text-lg font-medium tracking-wide opacity-0 hover:scale-105 transition-transform duration-300"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0"
         >
-          Umów wizytę
-        </Button>
+          <Button className="btn-modern-primary text-sm px-12 py-4">
+            Umów wizytę
+          </Button>
+          <Button className="btn-modern text-sm px-12 py-4">
+            Zobacz portfolio
+          </Button>
+        </div>
       </div>
 
-      {/* Enhanced scroll indicator */}
+      {/* Modern scroll indicator */}
       <div 
         ref={scrollRef}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-0"
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/60 opacity-0"
       >
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center hover:border-secondary transition-colors duration-300">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        <div className="flex flex-col items-center gap-2">
+          <div className="w-px h-12 bg-white/30"></div>
+          <span className="text-xs tracking-widest uppercase">Scroll</span>
         </div>
-        <p className="text-xs mt-2 tracking-wider">PRZEWIŃ W DÓŁ</p>
       </div>
     </section>
   )
