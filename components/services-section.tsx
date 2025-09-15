@@ -53,18 +53,16 @@ export function ServicesSection() {
 
         <div ref={servicesRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card
+            <div
               key={index}
-              className="group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0"
+              className="glass-card group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0 p-8 text-center"
             >
-              <CardContent className="p-8 text-center">
-                <h3 className="font-serif text-xl font-semibold mb-4 group-hover:text-secondary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{service.description}</p>
-                <div className="text-secondary font-semibold text-lg">{service.price}</div>
-              </CardContent>
-            </Card>
+              <h3 className="font-serif text-xl font-semibold mb-4 group-hover:text-secondary transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{service.description}</p>
+              <div className="text-secondary font-semibold text-lg">{service.price}</div>
+            </div>
           ))}
         </div>
       </div>
