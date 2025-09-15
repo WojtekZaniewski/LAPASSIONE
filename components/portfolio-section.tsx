@@ -29,12 +29,14 @@ export function PortfolioSection() {
     <section ref={sectionRef} className="py-20 bg-muted/30 opacity-0">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Portfolio</h2>
-          <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Poznaj nasze najnowsze kreacje inspirowane światem haute couture i najnowszymi trendami z międzynarodowych
-            wybiegów.
-          </p>
+          <div className="glass-container p-8 max-w-4xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 glass-text">Portfolio</h2>
+            <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Poznaj nasze najnowsze kreacje inspirowane światem haute couture i najnowszymi trendami z międzynarodowych
+              wybiegów.
+            </p>
+          </div>
         </div>
 
         <div ref={portfolioRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
