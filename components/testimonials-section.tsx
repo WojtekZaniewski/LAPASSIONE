@@ -39,29 +39,29 @@ export function TestimonialsSection() {
     <section ref={sectionRef} className="py-20 bg-background opacity-0">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Opinie Klientów</h2>
-          <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Poznaj opinie naszych zadowolonych klientów, którzy zaufali naszej ekspertyzie i doświadczeniu w świecie
-            luksusowego fryzjerstwa.
-          </p>
+          <div className="glass-container p-8 max-w-4xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 glass-text">Opinie Klientów</h2>
+            <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Poznaj opinie naszych zadowolonych klientów, którzy zaufali naszej ekspertyzie i doświadczeniu w świecie
+              luksusowego fryzjerstwa.
+            </p>
+          </div>
         </div>
 
         <div ref={testimonialsRef} className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card
+            <div
               key={index}
-              className="border-border/50 hover:shadow-lg transition-all duration-700 hover:scale-105 opacity-0"
+              className="glass-card hover:shadow-lg transition-all duration-700 hover:scale-105 opacity-0 p-8"
             >
-              <CardContent className="p-8">
-                <div className="text-secondary text-4xl mb-4 font-serif">"</div>
-                <p className="text-muted-foreground mb-6 leading-relaxed italic">{testimonial.text}</p>
-                <div className="border-t border-border pt-4">
-                  <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>
+              <div className="text-secondary text-4xl mb-4 font-serif">"</div>
+              <p className="text-muted-foreground mb-6 leading-relaxed italic">{testimonial.text}</p>
+              <div className="border-t border-border pt-4">
+                <p className="font-semibold">{testimonial.author}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>

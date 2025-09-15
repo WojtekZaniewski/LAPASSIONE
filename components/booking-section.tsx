@@ -29,21 +29,23 @@ export function BookingSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div ref={headerRef} className="text-center mb-16 opacity-0">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground">Rezerwacja Online</h2>
-            <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Zarezerwuj swoją wizytę w La Passione i doświadcz luksusowego fryzjerstwa na najwyższym poziomie.
-            </p>
+            <div className="glass-container p-8 max-w-4xl mx-auto">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground glass-text">Rezerwacja Online</h2>
+              <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                Zarezerwuj swoją wizytę w La Passione i doświadcz luksusowego fryzjerstwa na najwyższym poziomie.
+              </p>
+            </div>
           </div>
 
-          <Card
+          <div
             ref={formRef}
-            className="border-border/50 shadow-xl hover:shadow-2xl opacity-0"
+            className="glass-card shadow-xl hover:shadow-2xl opacity-0 p-8"
           >
-            <CardHeader className="text-center pb-8">
-              <CardTitle className="font-serif text-2xl">Umów wizytę</CardTitle>
-            </CardHeader>
-            <CardContent className="p-8">
+            <div className="text-center pb-8">
+              <h3 className="font-serif text-2xl glass-text">Umów wizytę</h3>
+            </div>
+            <div className="p-8">
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>

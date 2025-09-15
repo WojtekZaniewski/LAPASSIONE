@@ -43,7 +43,7 @@ export function PortfolioSection() {
           {portfolioImages.map((image, index) => (
             <div
               key={image.id}
-              className="group relative overflow-hidden rounded-lg aspect-[4/5] bg-muted transition-all duration-700 hover:scale-105 opacity-0"
+              className="group relative overflow-hidden rounded-lg aspect-[4/5] bg-muted transition-all duration-700 hover:scale-105 opacity-0 glass-card"
             >
               <img
                 src={`/abstract-geometric-shapes.png?height=600&width=480&query=${image.query}`}
@@ -52,7 +52,7 @@ export function PortfolioSection() {
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300">
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-secondary text-secondary-foreground px-6 py-2 rounded-full font-medium">
+                  <div className="glass-button px-6 py-2 rounded-full font-medium">
                     Zobacz więcej
                   </div>
                 </div>
