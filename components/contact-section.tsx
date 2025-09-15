@@ -22,47 +22,53 @@ export function ContactSection() {
   })
 
   return (
-    <section ref={sectionRef} className="py-20 bg-primary text-primary-foreground opacity-0">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section ref={sectionRef} className="section-modern bg-black text-white opacity-0">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-24">
           <div ref={infoRef} className="opacity-0">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Kontakt</h2>
-            <div className="w-16 h-px bg-secondary mb-8"></div>
+            <div className="mb-12">
+              <span className="text-sm font-medium tracking-widest uppercase text-white/60 mb-4 block">
+                Contact
+              </span>
+              <h2 className="heading-2 text-white mb-8">
+                Let's make something<br />
+                <span className="text-white/60">unforgettable</span>
+              </h2>
+            </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                <MapPin className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+            <div className="space-y-8">
+              <div className="flex items-start gap-6 hover:translate-x-2 transition-transform duration-300">
+                <MapPin className="w-6 h-6 text-white/60 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Adres</h3>
-                  <p className="text-primary-foreground/80">
-                    ul. Elegancka 15
-                    <br />
+                  <h3 className="font-semibold mb-2 text-white">Adres</h3>
+                  <p className="text-white/80 text-lg">
+                    ul. Elegancka 15<br />
                     00-001 Warszawa
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                <Phone className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-6 hover:translate-x-2 transition-transform duration-300">
+                <Phone className="w-6 h-6 text-white/60 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Telefon</h3>
-                  <p className="text-primary-foreground/80">+48 123 456 789</p>
+                  <h3 className="font-semibold mb-2 text-white">Telefon</h3>
+                  <p className="text-white/80 text-lg">+48 123 456 789</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                <Mail className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-6 hover:translate-x-2 transition-transform duration-300">
+                <Mail className="w-6 h-6 text-white/60 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-primary-foreground/80">kontakt@lapassione.pl</p>
+                  <h3 className="font-semibold mb-2 text-white">Email</h3>
+                  <p className="text-white/80 text-lg">kontakt@lapassione.pl</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                <Clock className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-6 hover:translate-x-2 transition-transform duration-300">
+                <Clock className="w-6 h-6 text-white/60 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Godziny otwarcia</h3>
-                  <div className="text-primary-foreground/80 space-y-1">
+                  <h3 className="font-semibold mb-2 text-white">Godziny otwarcia</h3>
+                  <div className="text-white/80 text-lg space-y-1">
                     <p>Pon - Pt: 9:00 - 20:00</p>
                     <p>Sobota: 9:00 - 18:00</p>
                     <p>Niedziela: 10:00 - 16:00</p>
@@ -71,32 +77,46 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="mt-12">
-              <h3 className="font-semibold mb-4">Śledź nas</h3>
+            <div className="mt-16">
+              <h3 className="font-semibold mb-6 text-white">Śledź nas</h3>
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center hover:bg-secondary/90 transition-all duration-300 hover:scale-110"
+                  className="w-14 h-14 border border-white/20 text-white rounded-full flex items-center justify-center hover:border-white/60 hover:bg-white/10 transition-all duration-300 hover:scale-110"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center hover:bg-secondary/90 transition-all duration-300 hover:scale-110"
+                  className="w-14 h-14 border border-white/20 text-white rounded-full flex items-center justify-center hover:border-white/60 hover:bg-white/10 transition-all duration-300 hover:scale-110"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <Facebook className="w-6 h-6" />
                 </a>
               </div>
             </div>
           </div>
 
           <div ref={mapRef} className="relative opacity-0">
-            <div className="bg-muted rounded-lg h-96 flex items-center justify-center hover:scale-105 transition-transform duration-500">
-              <div className="text-center text-muted-foreground">
-                <MapPin className="w-12 h-12 mx-auto mb-4" />
-                <p>Mapa lokalizacji</p>
+            <div className="bg-white/5 border border-white/10 rounded-lg h-[500px] flex items-center justify-center hover:bg-white/10 transition-all duration-500 hover-lift">
+              <div className="text-center text-white/60">
+                <MapPin className="w-16 h-16 mx-auto mb-6" />
+                <p className="text-lg mb-2">Mapa lokalizacji</p>
                 <p className="text-sm">ul. Elegancka 15, Warszawa</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-24 pt-12 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-white/60">
+              <p className="text-sm">All content © La Passione 2025</p>
+            </div>
+            <div className="flex gap-8 text-sm text-white/60">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Careers</a>
             </div>
           </div>
         </div>
