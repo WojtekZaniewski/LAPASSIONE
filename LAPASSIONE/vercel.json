@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd LAPASSIONE && pnpm run build",
+  "installCommand": "cd LAPASSIONE && pnpm install",
+  "framework": "nextjs",
+  "rootDirectory": "LAPASSIONE"
+}

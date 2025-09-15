@@ -4,15 +4,28 @@ import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 export function ContactSection() {
-  const [ref, isVisible] = useIntersectionObserver()
+  const [sectionRef, isSectionVisible] = useIntersectionObserver({
+    animationType: "fade-in-up",
+    threshold: 0.1,
+  })
+
+  const [infoRef, isInfoVisible] = useIntersectionObserver({
+    animationType: "slide-in-left",
+    threshold: 0.1,
+    delay: 200,
+  })
+
+  const [mapRef, isMapVisible] = useIntersectionObserver({
+    animationType: "slide-in-right",
+    threshold: 0.1,
+    delay: 400,
+  })
 
   return (
-    <section ref={ref} className="py-20 bg-primary text-primary-foreground">
+    <section ref={sectionRef} className="py-20 bg-primary text-primary-foreground opacity-0">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16">
-          <div
-            className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
-          >
+          <div ref={infoRef} className="opacity-0">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Kontakt</h2>
             <div className="w-16 h-px bg-secondary mb-8"></div>
 
@@ -77,9 +90,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div
-            className={`relative transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-          >
+          <div ref={mapRef} className="relative opacity-0">
             <div className="bg-muted rounded-lg h-96 flex items-center justify-center hover:scale-105 transition-transform duration-500">
               <div className="text-center text-muted-foreground">
                 <MapPin className="w-12 h-12 mx-auto mb-4" />
