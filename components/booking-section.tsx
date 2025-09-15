@@ -112,13 +112,13 @@ export function BookingSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 py-3 text-lg font-medium hover:scale-105 transition-all duration-300"
+                  className="w-full glass-button py-3 text-lg font-medium hover:scale-105 transition-all duration-300"
                 >
                   Zarezerwuj wizytę
                 </Button>
               </form>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
