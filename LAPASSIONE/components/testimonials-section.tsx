@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { useIntersectionObserver, useStaggeredAnimation } from "@/hooks/use-intersection-observer"
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 const testimonials = [
   {
@@ -22,23 +22,14 @@ const testimonials = [
 ]
 
 export function TestimonialsSection() {
-  const [sectionRef, isSectionVisible] = useIntersectionObserver({
-    animationType: "fade-in-up",
-    threshold: 0.1,
-  })
-
-  const [headerRef, isHeaderVisible] = useIntersectionObserver({
-    animationType: "slide-in-from-top",
-    threshold: 0.1,
-    delay: 200,
-  })
-
-  const testimonialsRef = useStaggeredAnimation(testimonials.length, 200, "bounce-in")
+  const [ref, isVisible] = useIntersectionObserver()
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background opacity-0">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div ref={headerRef} className="text-center mb-16 opacity-0">
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Opinie Klientów</h2>
           <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -47,11 +38,14 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div ref={testimonialsRef} className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="border-border/50 hover:shadow-lg transition-all duration-700 hover:scale-105 opacity-0"
+              className={`border-border/50 hover:shadow-lg transition-all duration-700 hover:scale-105 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
               <CardContent className="p-8">
                 <div className="text-secondary text-4xl mb-4 font-serif">"</div>

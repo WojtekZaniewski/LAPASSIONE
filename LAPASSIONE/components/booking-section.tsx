@@ -7,28 +7,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 export function BookingSection() {
-  const [sectionRef, isSectionVisible] = useIntersectionObserver({
-    animationType: "fade-in-up",
-    threshold: 0.1,
-  })
-
-  const [headerRef, isHeaderVisible] = useIntersectionObserver({
-    animationType: "slide-in-from-top",
-    threshold: 0.1,
-    delay: 200,
-  })
-
-  const [formRef, isFormVisible] = useIntersectionObserver({
-    animationType: "scale-in",
-    threshold: 0.1,
-    delay: 400,
-  })
+  const [ref, isVisible] = useIntersectionObserver()
 
   return (
-    <section ref={sectionRef} className="py-20 bg-card opacity-0">
+    <section ref={ref} className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div ref={headerRef} className="text-center mb-16 opacity-0">
+          <div
+            className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground">Rezerwacja Online</h2>
             <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -37,8 +24,9 @@ export function BookingSection() {
           </div>
 
           <Card
-            ref={formRef}
-            className="border-border/50 shadow-xl hover:shadow-2xl opacity-0"
+            className={`border-border/50 shadow-xl transition-all duration-1000 delay-300 hover:shadow-2xl ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
           >
             <CardHeader className="text-center pb-8">
               <CardTitle className="font-serif text-2xl">Umów wizytę</CardTitle>
