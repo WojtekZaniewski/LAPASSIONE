@@ -62,13 +62,13 @@ export function HeroSection() {
         <div className="mb-8">
           <h1 
             ref={titleRef}
-            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0"
+            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0 glass-text"
           >
             La Passione
           </h1>
           <div 
             ref={subtitleRef}
-            className="w-24 h-px bg-secondary mx-auto mb-6 opacity-0"
+            className="w-24 h-px bg-secondary mx-auto mb-6 opacity-0 liquid-wave"
           ></div>
           <p 
             ref={subtitleRef}
