@@ -25,19 +25,21 @@ export function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div ref={textRef} className="opacity-0">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground">
-              Filozofia Piękna
-            </h2>
-            <div className="w-16 h-px bg-secondary mb-8"></div>
-            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-              W La Passione wierzymy, że fryzjerstwo to sztuka, która łączy technikę z kreatywnością. Nasz zespół
-              ekspertów czerpie inspirację z najnowszych trendów haute couture, tworząc unikalne stylizacje dopasowane
-              do Twojej osobowości.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Każda wizyta w naszym salonie to podróż przez świat luksusu i elegancji, gdzie dbałość o detale spotyka
-              się z najwyższą jakością obsługi.
-            </p>
+            <div className="glass-container p-8">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground glass-text">
+                Filozofia Piękna
+              </h2>
+              <div className="w-16 h-px bg-secondary mb-8 liquid-wave"></div>
+              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                W La Passione wierzymy, że fryzjerstwo to sztuka, która łączy technikę z kreatywnością. Nasz zespół
+                ekspertów czerpie inspirację z najnowszych trendów haute couture, tworząc unikalne stylizacje dopasowane
+                do Twojej osobowości.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Każda wizyta w naszym salonie to podróż przez świat luksusu i elegancji, gdzie dbałość o detale spotyka
+                się z najwyższą jakością obsługi.
+              </p>
+            </div>
           </div>
           <div ref={imageRef} className="relative opacity-0">
             <img
