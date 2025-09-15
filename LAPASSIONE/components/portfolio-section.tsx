@@ -1,9 +1,18 @@
 "use client"
 
-import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
+import { useIntersectionObserver, useStaggeredAnimation } from "@/hooks/use-intersection-observer"
 
 export function PortfolioSection() {
-  const [ref, isVisible] = useIntersectionObserver()
+  const [sectionRef, isSectionVisible] = useIntersectionObserver({
+    animationType: "fade-in-up",
+    threshold: 0.1,
+  })
+
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({
+    animationType: "slide-in-from-top",
+    threshold: 0.1,
+    delay: 200,
+  })
 
   const portfolioImages = [
     { id: 1, query: "elegant+bob+haircut+fashion+model+black+and+white+professional" },
@@ -14,12 +23,12 @@ export function PortfolioSection() {
     { id: 6, query: "long+wavy+hair+luxury+salon+treatment+glossy+finish" },
   ]
 
+  const portfolioRef = useStaggeredAnimation(portfolioImages.length, 100, "zoom-in")
+
   return (
-    <section ref={ref} className="py-20 bg-muted/30">
+    <section ref={sectionRef} className="py-20 bg-muted/30 opacity-0">
       <div className="container mx-auto px-4">
-        <div
-          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        >
+        <div ref={headerRef} className="text-center mb-16 opacity-0">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Portfolio</h2>
           <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -28,14 +37,11 @@ export function PortfolioSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={portfolioRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioImages.map((image, index) => (
             <div
               key={image.id}
-              className={`group relative overflow-hidden rounded-lg aspect-[4/5] bg-muted transition-all duration-700 hover:scale-105 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className="group relative overflow-hidden rounded-lg aspect-[4/5] bg-muted transition-all duration-700 hover:scale-105 opacity-0"
             >
               <img
                 src={`/abstract-geometric-shapes.png?height=600&width=480&query=${image.query}`}
