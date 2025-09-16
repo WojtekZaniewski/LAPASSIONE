@@ -30,9 +30,20 @@ export function PortfolioSection() {
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-secondary">Portfolio</h2>
-            <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <h2 
+              className="font-serif text-4xl md:text-5xl font-bold mb-6"
+              style={{ color: 'oklch(0.95 0.15 85)' }}
+            >
+              Portfolio
+            </h2>
+            <div 
+              className="w-16 h-px mx-auto mb-6 liquid-wave"
+              style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
+            ></div>
+            <p 
+              className="text-lg max-w-2xl mx-auto text-pretty"
+              style={{ color: 'oklch(0.8 0.1 85)' }}
+            >
               Poznaj nasze najnowsze kreacje inspirowane światem haute couture i najnowszymi trendami z międzynarodowych
               wybiegów.
             </p>
