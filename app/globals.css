@@ -918,53 +918,12 @@ body {
 }
 
 .glass-nav {
-  background: linear-gradient(135deg, 
-    rgba(0, 0, 0, 0.1) 0%, 
-    rgba(0, 0, 0, 0.05) 50%, 
-    rgba(0, 0, 0, 0.08) 100%) !important;
+  background: rgba(0, 0, 0, 0.05) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
-}
-
-.glass-nav::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, 
-    rgba(0, 0, 0, 0.02) 0%, 
-    rgba(0, 0, 0, 0.01) 25%, 
-    rgba(0, 0, 0, 0.03) 50%, 
-    rgba(0, 0, 0, 0.015) 75%, 
-    rgba(0, 0, 0, 0.025) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
-.glass-nav::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 0, 0, 0.01) 25%, 
-    transparent 50%, 
-    rgba(0, 0, 0, 0.01) 75%, 
-    transparent 100%);
-  animation: metallic-shimmer 3s ease-in-out infinite;
-  z-index: -2;
 }
 
 .glass-nav-dark {
