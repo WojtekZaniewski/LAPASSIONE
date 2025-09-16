@@ -26,7 +26,7 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div ref={textRef} className="opacity-0">
             <div className="glass-container p-8">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-card-foreground glass-text">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-secondary">
                 Filozofia Piękna
               </h2>
               <div className="w-16 h-px bg-secondary mb-8 liquid-wave"></div>

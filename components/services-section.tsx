@@ -44,7 +44,7 @@ export function ServicesSection() {
     <section ref={sectionRef} className="py-20 bg-background opacity-0">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Nasze Usługi</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Nasze Usługi</h2>
           <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Odkryj pełną gamę luksusowych usług fryzjerskich, które podkreślą Twoją naturalną elegancję i styl.

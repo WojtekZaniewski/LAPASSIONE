@@ -40,7 +40,7 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 glass-text">Opinie Klientów</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Opinie Klientów</h2>
             <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
               Poznaj opinie naszych zadowolonych klientów, którzy zaufali naszej ekspertyzie i doświadczeniu w świecie

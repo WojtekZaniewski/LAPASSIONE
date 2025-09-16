@@ -30,7 +30,7 @@ export function PortfolioSection() {
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 glass-text">Portfolio</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-secondary">Portfolio</h2>
             <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
               Poznaj nasze najnowsze kreacje inspirowane światem haute couture i najnowszymi trendami z międzynarodowych

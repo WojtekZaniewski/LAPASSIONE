@@ -27,7 +27,7 @@ export function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div ref={infoRef} className="opacity-0">
             <div className="glass-container p-8">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 glass-text">Kontakt</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Kontakt</h2>
               <div className="w-16 h-px bg-secondary mb-8 liquid-wave"></div>
 
               <div className="space-y-6">
