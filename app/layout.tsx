@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ScrollProgress, ScrollToTop } from "@/components/scroll-indicators"
 import { ScrollAnimationProvider } from "@/components/scroll-animation-provider"
+import { SmoothWheelScroll } from "@/components/smooth-wheel-scroll"
 import "./globals.css"
 
 const inter = Inter({
@@ -47,6 +48,7 @@ export default function RootLayout({
           <Suspense fallback={null}>{children}</Suspense>
           <ScrollProgress />
           <ScrollToTop />
+          <SmoothWheelScroll />
         </ScrollAnimationProvider>
         <Analytics />
       </body>
