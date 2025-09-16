@@ -641,10 +641,13 @@ body {
   position: relative;
   overflow: visible;
   margin: 0;
-  padding: 5rem 0 2rem 0;
+  padding: 0;
   border: none;
   outline: none;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Ensure perfect section alignment */
@@ -673,14 +676,14 @@ body {
 @media (max-width: 768px) {
   .snap-section {
     min-height: 100vh;
-    padding: 4rem 0 2rem 0;
+    padding: 0;
   }
 }
 
 @media (max-width: 480px) {
   .snap-section {
     min-height: 100vh;
-    padding: 3rem 0 1rem 0;
+    padding: 0;
   }
 }
 
