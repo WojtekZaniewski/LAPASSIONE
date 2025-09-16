@@ -8,10 +8,10 @@ export function SmoothWheelScroll() {
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      // Only handle wheel events on the main content area
+      // Don't interfere with form inputs or buttons
       const target = e.target as HTMLElement
-      if (target.closest('.nav-button') || target.closest('button')) {
-        return // Allow normal behavior for buttons
+      if (target.closest('input') || target.closest('textarea') || target.closest('button')) {
+        return
       }
 
       e.preventDefault()
@@ -37,14 +37,14 @@ export function SmoothWheelScroll() {
       const currentScrollPosition = window.pageYOffset
       const viewportHeight = window.innerHeight
       
-      // Find current section more accurately
+      // Find current section based on scroll position
       let currentSectionIndex = 0
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i] as HTMLElement
         const sectionTop = section.offsetTop
         const sectionBottom = sectionTop + section.offsetHeight
         
-        if (currentScrollPosition >= sectionTop - 100 && currentScrollPosition < sectionBottom - 100) {
+        if (currentScrollPosition >= sectionTop - viewportHeight/2 && currentScrollPosition < sectionBottom - viewportHeight/2) {
           currentSectionIndex = i
           break
         }
@@ -71,7 +71,7 @@ export function SmoothWheelScroll() {
 
         if (nextSection) {
           const elementPosition = nextSection.offsetTop
-          const headerHeight = 100 // Account for navigation bar
+          const headerHeight = 80 // Account for navigation bar
           const offsetPosition = Math.max(0, elementPosition - headerHeight)
 
           window.scrollTo({
@@ -84,7 +84,7 @@ export function SmoothWheelScroll() {
       // Reset scrolling flag after animation completes
       scrollTimeout.current = setTimeout(() => {
         isScrolling.current = false
-      }, 800)
+      }, 1000)
     }
 
     // Add wheel event listener with passive: false to allow preventDefault
