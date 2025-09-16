@@ -442,7 +442,7 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Account for fixed header */
+  scroll-padding-top: 0px; /* Remove padding to prevent overlap */
 }
 
 /* Enhanced smooth scrolling for wheel events */
