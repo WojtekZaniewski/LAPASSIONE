@@ -89,7 +89,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex items-center">
-            <button className="glass-button text-sm font-medium py-2 px-3 font-sans">
+            <button className="nav-button">
               Strona główna
             </button>
           </div>
@@ -100,7 +100,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="glass-button text-sm font-medium py-2 px-3 font-sans"
+                className="nav-button"
               >
                 {item.name}
               </button>
@@ -111,7 +111,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Button 
               onClick={() => handleNavClick("#booking")}
-              className="glass-button text-yellow-300 hover:text-yellow-100 text-sm px-4 py-2 border-yellow-400/50 font-sans"
+              className="shimmer-button"
             >
               Umów wizytę
             </Button>
@@ -138,14 +138,14 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="glass-button font-medium py-2 text-left w-full font-sans"
+                  className="nav-button text-left w-full"
                 >
                   {item.name}
                 </button>
               ))}
               <Button 
                 onClick={() => handleNavClick("#booking")}
-                className="glass-button w-full mt-4 font-sans"
+                className="shimmer-button w-full mt-4"
               >
                 Umów wizytę
               </Button>
