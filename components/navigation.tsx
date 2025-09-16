@@ -86,10 +86,17 @@ export function Navigation() {
       style={getTaskbarStyles()}
     >
       <div className="px-6">
-        <div className="flex items-center justify-center h-12 space-x-8">
-          {/* Desktop Navigation */}
+        <div className="flex items-center justify-between h-12">
+          {/* Logo */}
+          <div className="flex items-center">
+            <h1 className="font-serif text-lg font-bold text-gray-300">
+              Strona główna
+            </h1>
+          </div>
+
+          {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
+            {navItems.slice(1, -1).map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
@@ -98,6 +105,10 @@ export function Navigation() {
                 {item.name}
               </button>
             ))}
+          </div>
+
+          {/* Button */}
+          <div className="flex items-center">
             <Button 
               onClick={() => handleNavClick("#booking")}
               className="glass-button text-gray-300 hover:text-white text-sm px-4 py-2"
