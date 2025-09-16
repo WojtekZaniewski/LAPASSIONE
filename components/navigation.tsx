@@ -89,9 +89,9 @@ export function Navigation() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="glass-button text-sm font-medium py-2 px-3">
+            <button className="glass-button text-sm font-medium py-2 px-3 font-sans">
               Strona główna
-            </h1>
+            </button>
           </div>
 
           {/* Desktop Navigation - Centered */}
