@@ -51,18 +51,18 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div ref={servicesRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={servicesRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className="glass-card group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0 p-8 text-center reveal"
+              className="glass-card group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0 p-6 text-center reveal"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-serif text-xl font-semibold mb-4 group-hover:text-secondary transition-colors">
+              <h3 className="font-serif text-lg font-semibold mb-3 group-hover:text-secondary transition-colors">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{service.description}</p>
-              <div className="text-secondary font-semibold text-lg">{service.price}</div>
+              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{service.description}</p>
+              <div className="text-secondary font-semibold text-base">{service.price}</div>
             </div>
           ))}
         </div>
