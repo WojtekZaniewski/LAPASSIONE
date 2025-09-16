@@ -80,10 +80,13 @@ export function smoothScrollTo(elementId: string, offset: number = 0) {
   const targetSection = document.getElementById(elementId)
   
   if (targetSection) {
-    // Use scrollIntoView for more reliable scrolling
-    targetSection.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+    const elementPosition = targetSection.offsetTop
+    const headerHeight = 80 // Fixed header height
+    const offsetPosition = elementPosition - headerHeight
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
     })
   }
 }
