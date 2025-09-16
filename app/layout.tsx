@@ -5,6 +5,7 @@ import { Crimson_Text } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ScrollProgress, ScrollToTop } from "@/components/scroll-indicators"
+import { ScrollAnimationProvider } from "@/components/scroll-animation-provider"
 import "./globals.css"
 
 const inter = Inter({
@@ -42,9 +43,11 @@ export default function RootLayout({
           <div className="floating-glass w-16 h-16 top-1/2 right-1/4 opacity-35"></div>
         </div>
         
-        <Suspense fallback={null}>{children}</Suspense>
-        <ScrollProgress />
-        <ScrollToTop />
+        <ScrollAnimationProvider>
+          <Suspense fallback={null}>{children}</Suspense>
+          <ScrollProgress />
+          <ScrollToTop />
+        </ScrollAnimationProvider>
         <Analytics />
       </body>
     </html>
