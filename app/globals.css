@@ -76,10 +76,10 @@
 }
 
 @theme inline {
-  /* Updated to use Inter and Crimson Text fonts */
-  --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-serif: var(--font-crimson), serif;
-  --font-mono: ui-monospace, monospace;
+  /* Updated to use Inter font everywhere */
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-mono: var(--font-inter), 'Inter', ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -121,6 +121,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-family: 'Inter', sans-serif !important;
   }
   body {
     @apply bg-background text-foreground;
@@ -129,6 +130,13 @@
       oklch(0.02 0 0) 50%, 
       oklch(0.05 0 0) 100%);
     position: relative;
+    font-family: 'Inter', sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif !important;
+  }
+  p, span, div, a, li, ul, ol {
+    font-family: 'Inter', sans-serif !important;
   }
   
   body::before {
@@ -147,12 +155,12 @@
   }
 }
 
-/* Updated Google Fonts import for Inter and Crimson Text */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap");
+/* Updated Google Fonts import for Inter only */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-/* Font family definitions */
+/* Font family definitions - All use Inter */
 .font-serif {
-  font-family: 'Crimson Text', serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .font-sans {
@@ -607,6 +615,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 0px;
   overflow-x: hidden;
+  height: 100%;
 }
 
 /* Enhanced smooth scrolling for wheel events */
@@ -614,23 +623,23 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Snap scrolling for better wheel navigation */
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+/* Remove duplicate scrollbars */
+* {
+  box-sizing: border-box;
 }
 
-.snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+html, body {
+  overflow-x: hidden;
+  height: 100%;
 }
 
-/* Alternative wheel scroll handling */
-body {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+main {
+  overflow-x: hidden;
 }
 
 /* Prevent default scroll behavior during wheel navigation */
@@ -645,15 +654,7 @@ body {
 }
 
 /* Snap scrolling for sections */
-.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
 .snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 100vh;
   width: 100vw;
   position: relative;

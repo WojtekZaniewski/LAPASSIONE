@@ -51,7 +51,7 @@ export default function HomePage() {
         const sectionTop = section.offsetTop
         const sectionBottom = sectionTop + section.offsetHeight
         
-        if (currentScrollPosition >= sectionTop - viewportHeight/2 && currentScrollPosition < sectionBottom - viewportHeight/2) {
+        if (currentScrollPosition >= sectionTop - viewportHeight/3 && currentScrollPosition < sectionBottom - viewportHeight/3) {
           currentSectionIndex = i
           break
         }
@@ -78,7 +78,7 @@ export default function HomePage() {
 
         if (nextSection) {
           const elementPosition = nextSection.offsetTop
-          const headerHeight = 80 // Account for navigation bar
+          const headerHeight = 100 // Account for navigation bar
           const offsetPosition = Math.max(0, elementPosition - headerHeight)
 
           window.scrollTo({
@@ -91,7 +91,7 @@ export default function HomePage() {
       // Reset scrolling flag after animation completes
       scrollTimeout = setTimeout(() => {
         isScrolling = false
-      }, 1000)
+      }, 800)
     }
 
     // Add wheel event listener with passive: false to allow preventDefault
