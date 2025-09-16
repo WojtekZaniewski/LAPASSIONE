@@ -89,7 +89,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="font-serif text-lg font-bold gold-shimmer-text">
+            <h1 className="font-serif text-lg font-bold gold-shimmer-text" style={{ fontFamily: 'Crimson Text, serif' }}>
               Strona główna
             </h1>
           </div>
