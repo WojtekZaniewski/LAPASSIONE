@@ -59,21 +59,24 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 
             ref={titleRef}
-            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0 text-white"
+            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0"
+            style={{ color: 'oklch(0.95 0.15 85)' }}
           >
             La Passione
           </h1>
           <div 
             ref={subtitleRef}
-            className="w-24 h-px bg-secondary mx-auto mb-6 opacity-0 liquid-wave"
+            className="w-24 h-px mx-auto mb-6 opacity-0 liquid-wave"
+            style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
           ></div>
           <p 
             ref={subtitleRef}
             className="text-xl md:text-2xl font-light tracking-wide text-balance opacity-0"
+            style={{ color: 'oklch(0.9 0.1 85)' }}
           >
             Twoje włosy, Twoja pasja
           </p>
@@ -83,7 +86,10 @@ export function HeroSection() {
           ref={descriptionRef}
           className="glass-container p-8 mb-8 max-w-2xl mx-auto opacity-0"
         >
-          <p className="text-lg md:text-xl leading-relaxed text-pretty">
+          <p 
+            className="text-lg md:text-xl leading-relaxed text-pretty"
+            style={{ color: 'oklch(0.9 0.1 85)' }}
+          >
             Odkryj świat luksusowego fryzjerstwa, gdzie każda wizyta to wyjątkowe doświadczenie inspirowane najnowszymi
             trendami z wybiegów mody.
           </p>
@@ -103,10 +109,20 @@ export function HeroSection() {
       <button 
         ref={scrollRef}
         onClick={() => smoothScrollTo("services", 80)}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-0 hover:scale-110 transition-transform duration-300"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 hover:scale-110 transition-transform duration-300"
+        style={{ color: 'oklch(0.9 0.1 85)' }}
       >
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center hover:border-secondary transition-colors duration-300">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        <div 
+          className="w-6 h-10 border-2 rounded-full flex justify-center transition-colors duration-300"
+          style={{ 
+            borderColor: 'oklch(0.8 0.15 85)',
+            '--hover-border-color': 'oklch(0.9 0.2 85)'
+          }}
+        >
+          <div 
+            className="w-1 h-3 rounded-full mt-2 animate-pulse"
+            style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
+          ></div>
         </div>
         <p className="text-xs mt-2 tracking-wider">PRZEWIŃ W DÓŁ</p>
       </button>

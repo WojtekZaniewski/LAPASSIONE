@@ -44,9 +44,20 @@ export function ServicesSection() {
     <section id="services" ref={sectionRef} className="snap-section min-h-screen w-screen opacity-0 flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Nasze Usługi</h2>
-          <div className="w-16 h-px bg-secondary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 
+            className="font-serif text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: 'oklch(0.95 0.15 85)' }}
+          >
+            Nasze Usługi
+          </h2>
+          <div 
+            className="w-16 h-px mx-auto mb-6"
+            style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
+          ></div>
+          <p 
+            className="text-lg max-w-2xl mx-auto text-pretty"
+            style={{ color: 'oklch(0.8 0.1 85)' }}
+          >
             Odkryj pełną gamę luksusowych usług fryzjerskich, które podkreślą Twoją naturalną elegancję i styl.
           </p>
         </div>
@@ -55,14 +66,27 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="glass-card group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0 p-6 text-center reveal"
+              className="glass-card group hover:shadow-xl transition-all duration-500 hover:scale-105 opacity-0 p-6 text-center reveal"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-serif text-lg font-semibold mb-3 group-hover:text-secondary transition-colors">
+              <h3 
+                className="font-serif text-lg font-semibold mb-3 transition-colors"
+                style={{ color: 'oklch(0.9 0.1 85)' }}
+              >
                 {service.title}
               </h3>
-              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{service.description}</p>
-              <div className="text-secondary font-semibold text-base">{service.price}</div>
+              <p 
+                className="mb-4 leading-relaxed text-sm"
+                style={{ color: 'oklch(0.7 0.1 85)' }}
+              >
+                {service.description}
+              </p>
+              <div 
+                className="font-semibold text-base"
+                style={{ color: 'oklch(0.8 0.15 85)' }}
+              >
+                {service.price}
+              </div>
             </div>
           ))}
         </div>
