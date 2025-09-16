@@ -83,8 +83,7 @@ export function TestimonialsSection() {
                 style={{ borderColor: 'oklch(0.8 0.15 85 / 0.3)' }}
               >
                 <p 
-                  className="font-semibold"
-                  style={{ color: 'oklch(0.9 0.1 85)' }}
+                  className="font-semibold gold-shimmer-text"
                 >
                   {testimonial.author}
                 </p>
