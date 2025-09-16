@@ -43,7 +43,8 @@ export function PortfolioSection() {
           {portfolioImages.map((image, index) => (
             <div
               key={image.id}
-              className="group relative overflow-hidden rounded-lg aspect-[4/5] bg-muted transition-all duration-700 hover:scale-105 opacity-0 glass-card"
+              className="group relative overflow-hidden rounded-lg aspect-[4/5] bg-muted transition-all duration-700 hover:scale-105 opacity-0 glass-card glass-reveal"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <img
                 src={`/abstract-geometric-shapes.png?height=600&width=480&query=${image.query}`}
