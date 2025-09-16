@@ -150,6 +150,15 @@
 /* Updated Google Fonts import for Inter and Crimson Text */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap");
 
+/* Font family definitions */
+.font-serif {
+  font-family: 'Crimson Text', serif;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Enhanced entrance animations inspired by modern web design */
 @keyframes fadeInUp {
   from {
