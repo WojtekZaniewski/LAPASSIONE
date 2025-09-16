@@ -68,8 +68,25 @@ export function Navigation() {
     return `${baseClass} ${glassClass}`
   }
 
+  // Get dynamic styles based on current section
+  const getTaskbarStyles = () => {
+    const lightSections = ['services', 'testimonials', 'booking']
+    const isLightSection = lightSections.includes(currentSection)
+    
+    return {
+      background: isLightSection ? 'rgba(0, 0, 0, 0.1)' : 'transparent',
+      backdropFilter: 'blur(20px)',
+      WebkitBackdropFilter: 'blur(20px)',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+    }
+  }
+
   return (
-    <nav className={getTaskbarClass()}>
+    <nav 
+      className={getTaskbarClass()}
+      style={getTaskbarStyles()}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
