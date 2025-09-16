@@ -28,8 +28,7 @@ export function ContactSection() {
           <div ref={infoRef} className="opacity-0">
             <div className="glass-container p-8">
               <h2 
-                className="font-serif text-4xl md:text-5xl font-bold mb-6"
-                style={{ color: 'oklch(0.95 0.15 85)' }}
+                className="font-serif text-4xl md:text-5xl font-bold mb-6 gold-shimmer-text"
               >
                 Kontakt
               </h2>
