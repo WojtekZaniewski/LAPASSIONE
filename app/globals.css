@@ -1079,7 +1079,6 @@ nav[class*="glass-nav-dark"] {
     rgba(255, 255, 255, 0.1),
     transparent
   );
-  animation: wave 3s linear infinite;
 }
 
 @keyframes wave {
@@ -1119,7 +1118,6 @@ nav[class*="glass-nav-dark"] {
     rgba(255, 255, 255, 0.05),
     transparent
   );
-  animation: rotate 10s linear infinite;
   opacity: 0.3;
 }
 
