@@ -1015,6 +1015,28 @@ nav[class*="glass-nav-dark"] {
   height: 100%;
   background: linear-gradient(
     90deg,
+    transparent 0%,
+    oklch(0.9 0.2 85 / 0.4) 50%,
+    transparent 100%
+  );
+  animation: metallic-shimmer 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.glass-button > * {
+  position: relative;
+  z-index: 2;
+}
+
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
     transparent,
     rgba(255, 255, 255, 0.2),
     transparent
@@ -1169,6 +1191,67 @@ nav[class*="glass-nav-dark"] {
     transform: translateX(100%);
     opacity: 0;
   }
+}
+
+/* Gold shimmer text effect */
+.gold-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    oklch(0.7 0.1 85) 0%,
+    oklch(0.9 0.2 85) 25%,
+    oklch(0.95 0.25 85) 50%,
+    oklch(0.9 0.2 85) 75%,
+    oklch(0.7 0.1 85) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: metallic-shimmer 3s ease-in-out infinite;
+}
+
+/* Gold shimmer button effect */
+.gold-shimmer-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(0.9 0.2 85 / 0.3) 50%,
+    transparent 100%
+  );
+  animation: metallic-shimmer 2s ease-in-out infinite;
+}
+
+/* Gold shimmer card effect */
+.gold-shimmer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(0.8 0.15 85 / 0.2) 50%,
+    transparent 100%
+  );
+  animation: metallic-shimmer 4s ease-in-out infinite;
 }
 
 /* Responsive glass effects */
