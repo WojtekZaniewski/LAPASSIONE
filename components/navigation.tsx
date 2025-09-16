@@ -89,7 +89,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="font-serif text-lg font-bold text-yellow-400">
+            <h1 className="font-serif text-lg font-bold gold-shimmer-text">
               Strona główna
             </h1>
           </div>
@@ -100,7 +100,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-yellow-300 hover:text-yellow-100 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-500/20 text-sm"
+                className="text-yellow-300 hover:text-yellow-100 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-500/20 text-sm gold-shimmer-text"
               >
                 {item.name}
               </button>
@@ -138,7 +138,7 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-yellow-300 hover:text-yellow-100 transition-colors duration-300 font-medium py-2 text-left"
+                  className="text-yellow-300 hover:text-yellow-100 transition-colors duration-300 font-medium py-2 text-left gold-shimmer-text"
                 >
                   {item.name}
                 </button>
