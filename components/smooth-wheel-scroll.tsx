@@ -12,7 +12,10 @@ export function SmoothWheelScroll() {
       e.preventDefault()
       e.stopPropagation()
       
-      if (isScrolling.current) return
+      if (isScrolling.current) {
+        console.log('Already scrolling, ignoring')
+        return
+      }
       
       isScrolling.current = true
       
@@ -25,33 +28,45 @@ export function SmoothWheelScroll() {
       const currentScrollPosition = window.pageYOffset
       const currentSectionIndex = Math.round(currentScrollPosition / window.innerHeight)
       
+      console.log('Current scroll position:', currentScrollPosition)
+      console.log('Current section index:', currentSectionIndex)
+      console.log('Total sections:', sections.length)
+      
       let nextIndex = currentSectionIndex
 
       // Determine scroll direction and next section
       if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
         // Scrolling down
         nextIndex = currentSectionIndex + 1
+        console.log('Scrolling down to section:', nextIndex)
       } else if (e.deltaY < 0 && currentSectionIndex > 0) {
         // Scrolling up
         nextIndex = currentSectionIndex - 1
+        console.log('Scrolling up to section:', nextIndex)
       } else {
         // Already at first or last section
+        console.log('Already at boundary, not scrolling')
         isScrolling.current = false
         return
       }
 
       if (nextIndex !== currentSectionIndex) {
         // Smooth scroll to next section
-        const scrollPosition = nextIndex * window.innerHeight
+        const nextSection = sections[nextIndex] as HTMLElement
+        console.log('Scrolling to section:', nextSection)
+        console.log('Section ID:', nextSection.id)
 
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: 'smooth'
-        })
+        if (nextSection) {
+          nextSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
       }
 
       // Reset scrolling flag after animation completes
       scrollTimeout.current = setTimeout(() => {
+        console.log('Scroll animation completed')
         isScrolling.current = false
       }, 1000)
     }
