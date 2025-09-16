@@ -88,8 +88,7 @@ export function BookingSection() {
 
                 <div>
                   <label 
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: 'oklch(0.9 0.1 85)' }}
+                    className="block text-sm font-medium mb-2 gold-shimmer-text"
                   >
                     Email
                   </label>
@@ -103,8 +102,7 @@ export function BookingSection() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label 
-                      className="block text-sm font-medium mb-2"
-                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                      className="block text-sm font-medium mb-2 gold-shimmer-text"
                     >
                       Preferowana data
                     </label>
@@ -115,8 +113,7 @@ export function BookingSection() {
                   </div>
                   <div>
                     <label 
-                      className="block text-sm font-medium mb-2"
-                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                      className="block text-sm font-medium mb-2 gold-shimmer-text"
                     >
                       Preferowana godzina
                     </label>
@@ -129,8 +126,7 @@ export function BookingSection() {
 
                 <div>
                   <label 
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: 'oklch(0.9 0.1 85)' }}
+                    className="block text-sm font-medium mb-2 gold-shimmer-text"
                   >
                     Rodzaj usługi
                   </label>
@@ -145,8 +141,7 @@ export function BookingSection() {
 
                 <div>
                   <label 
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: 'oklch(0.9 0.1 85)' }}
+                    className="block text-sm font-medium mb-2 gold-shimmer-text"
                   >
                     Dodatkowe uwagi
                   </label>

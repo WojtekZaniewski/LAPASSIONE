@@ -45,8 +45,7 @@ export function ContactSection() {
                   />
                   <div>
                     <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                      className="font-semibold mb-1 gold-shimmer-text"
                     >
                       Adres
                     </h3>
@@ -65,8 +64,7 @@ export function ContactSection() {
                   />
                   <div>
                     <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                      className="font-semibold mb-1 gold-shimmer-text"
                     >
                       Telefon
                     </h3>
@@ -81,8 +79,7 @@ export function ContactSection() {
                   />
                   <div>
                     <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                      className="font-semibold mb-1 gold-shimmer-text"
                     >
                       Email
                     </h3>
@@ -97,8 +94,7 @@ export function ContactSection() {
                   />
                   <div>
                     <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                      className="font-semibold mb-1 gold-shimmer-text"
                     >
                       Godziny otwarcia
                     </h3>
@@ -113,8 +109,7 @@ export function ContactSection() {
 
               <div className="mt-12">
                 <h3 
-                  className="font-semibold mb-4"
-                  style={{ color: 'oklch(0.9 0.1 85)' }}
+                  className="font-semibold mb-4 gold-shimmer-text"
                 >
                   Śledź nas
                 </h3>
