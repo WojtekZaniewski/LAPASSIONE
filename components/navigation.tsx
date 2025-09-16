@@ -69,14 +69,14 @@ export function Navigation() {
   // Get dynamic styles based on current section
   const getTaskbarStyles = () => {
     return {
-      background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.8) 100%)',
+      background: 'linear-gradient(135deg, oklch(0.8 0.15 85 / 0.2) 0%, oklch(0.6 0.1 85 / 0.1) 50%, oklch(0.7 0.12 85 / 0.15) 100%)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
-      border: '1px solid rgba(255, 215, 0, 0.3)',
-      borderRadius: '25px',
+      border: '1px solid oklch(0.8 0.15 85 / 0.4)',
+      borderRadius: '12px',
       margin: '20px auto',
       maxWidth: '700px',
-      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 215, 0, 0.2)'
+      boxShadow: '0 8px 32px oklch(0.8 0.15 85 / 0.2), inset 0 1px 0 oklch(0.9 0.2 85 / 0.6), inset 0 -1px 0 oklch(0.1 0 0 / 0.3)'
     }
   }
 
@@ -100,7 +100,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-yellow-300 hover:text-yellow-100 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-yellow-500/20 text-sm gold-shimmer-text"
+                className="glass-button text-sm font-medium py-2 px-3"
               >
                 {item.name}
               </button>
