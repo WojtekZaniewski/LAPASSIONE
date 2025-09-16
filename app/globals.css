@@ -473,12 +473,12 @@ body {
 .snap-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin: 0;
-  padding: 0;
+  padding: 5rem 0 2rem 0;
   border: none;
   outline: none;
   box-sizing: border-box;
@@ -504,27 +504,20 @@ body {
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Perfect section alignment */
-.snap-section {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-}
+/* Perfect section alignment - merged with main definition above */
 
 /* Responsive section adjustments */
 @media (max-width: 768px) {
   .snap-section {
     min-height: 100vh;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem 0;
   }
 }
 
 @media (max-width: 480px) {
   .snap-section {
     min-height: 100vh;
-    padding: 1rem 0;
+    padding: 3rem 0 1rem 0;
   }
 }
 
@@ -555,14 +548,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Perfect section positioning */
-.snap-section {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+/* Perfect section positioning - merged with main definition above */
 
 /* Prevent any overflow issues */
 body {
@@ -932,11 +918,11 @@ body {
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .glass-button {
