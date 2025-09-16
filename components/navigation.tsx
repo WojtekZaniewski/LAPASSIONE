@@ -138,14 +138,14 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-yellow-300 hover:text-yellow-100 transition-colors duration-300 font-medium py-2 text-left gold-shimmer-text"
+                  className="glass-button font-medium py-2 text-left w-full"
                 >
                   {item.name}
                 </button>
               ))}
               <Button 
                 onClick={() => handleNavClick("#booking")}
-                className="glass-button text-yellow-300 hover:text-yellow-100 w-full mt-4"
+                className="glass-button w-full mt-4"
               >
                 Umów wizytę
               </Button>
