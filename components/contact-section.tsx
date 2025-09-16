@@ -27,15 +27,31 @@ export function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div ref={infoRef} className="opacity-0">
             <div className="glass-container p-8">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Kontakt</h2>
-              <div className="w-16 h-px bg-secondary mb-8 liquid-wave"></div>
+              <h2 
+                className="font-serif text-4xl md:text-5xl font-bold mb-6"
+                style={{ color: 'oklch(0.95 0.15 85)' }}
+              >
+                Kontakt
+              </h2>
+              <div 
+                className="w-16 h-px mb-8 liquid-wave"
+                style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
+              ></div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                  <MapPin className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+                  <MapPin 
+                    className="w-6 h-6 mt-1 flex-shrink-0" 
+                    style={{ color: 'oklch(0.8 0.15 85)' }}
+                  />
                   <div>
-                    <h3 className="font-semibold mb-1">Adres</h3>
-                    <p className="text-primary-foreground/80">
+                    <h3 
+                      className="font-semibold mb-1"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Adres
+                    </h3>
+                    <p style={{ color: 'oklch(0.8 0.1 85)' }}>
                       ul. Elegancka 15
                       <br />
                       00-001 Warszawa
@@ -44,26 +60,50 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                  <Phone className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+                  <Phone 
+                    className="w-6 h-6 mt-1 flex-shrink-0" 
+                    style={{ color: 'oklch(0.8 0.15 85)' }}
+                  />
                   <div>
-                    <h3 className="font-semibold mb-1">Telefon</h3>
-                    <p className="text-primary-foreground/80">+48 123 456 789</p>
+                    <h3 
+                      className="font-semibold mb-1"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Telefon
+                    </h3>
+                    <p style={{ color: 'oklch(0.8 0.1 85)' }}>+48 123 456 789</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                  <Mail className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+                  <Mail 
+                    className="w-6 h-6 mt-1 flex-shrink-0" 
+                    style={{ color: 'oklch(0.8 0.15 85)' }}
+                  />
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-primary-foreground/80">kontakt@lapassione.pl</p>
+                    <h3 
+                      className="font-semibold mb-1"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Email
+                    </h3>
+                    <p style={{ color: 'oklch(0.8 0.1 85)' }}>kontakt@lapassione.pl</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                  <Clock className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
+                  <Clock 
+                    className="w-6 h-6 mt-1 flex-shrink-0" 
+                    style={{ color: 'oklch(0.8 0.15 85)' }}
+                  />
                   <div>
-                    <h3 className="font-semibold mb-1">Godziny otwarcia</h3>
-                    <div className="text-primary-foreground/80 space-y-1">
+                    <h3 
+                      className="font-semibold mb-1"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Godziny otwarcia
+                    </h3>
+                    <div className="space-y-1" style={{ color: 'oklch(0.8 0.1 85)' }}>
                       <p>Pon - Pt: 9:00 - 20:00</p>
                       <p>Sobota: 9:00 - 18:00</p>
                       <p>Niedziela: 10:00 - 16:00</p>
@@ -73,7 +113,12 @@ export function ContactSection() {
               </div>
 
               <div className="mt-12">
-                <h3 className="font-semibold mb-4">Śledź nas</h3>
+                <h3 
+                  className="font-semibold mb-4"
+                  style={{ color: 'oklch(0.9 0.1 85)' }}
+                >
+                  Śledź nas
+                </h3>
                 <div className="flex gap-4">
                   <a
                     href="#"
@@ -94,10 +139,18 @@ export function ContactSection() {
 
           <div ref={mapRef} className="relative opacity-0">
             <div className="glass-card rounded-lg h-96 flex items-center justify-center hover:scale-105 transition-transform duration-500">
-              <div className="text-center text-muted-foreground">
-                <MapPin className="w-12 h-12 mx-auto mb-4" />
-                <p>Mapa lokalizacji</p>
-                <p className="text-sm">ul. Elegancka 15, Warszawa</p>
+              <div className="text-center">
+                <MapPin 
+                  className="w-12 h-12 mx-auto mb-4" 
+                  style={{ color: 'oklch(0.8 0.15 85)' }}
+                />
+                <p style={{ color: 'oklch(0.9 0.1 85)' }}>Mapa lokalizacji</p>
+                <p 
+                  className="text-sm"
+                  style={{ color: 'oklch(0.7 0.1 85)' }}
+                >
+                  ul. Elegancka 15, Warszawa
+                </p>
               </div>
             </div>
           </div>
