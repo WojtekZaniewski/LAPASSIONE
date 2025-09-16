@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { Crimson_Text } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { ScrollProgress, ScrollToTop } from "@/components/scroll-indicators"
 import "./globals.css"
 
 const inter = Inter({
@@ -42,6 +43,8 @@ export default function RootLayout({
         </div>
         
         <Suspense fallback={null}>{children}</Suspense>
+        <ScrollProgress />
+        <ScrollToTop />
         <Analytics />
       </body>
     </html>
