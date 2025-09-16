@@ -26,22 +26,37 @@ export function SmoothWheelScroll() {
       
       const sections = document.querySelectorAll('.snap-section')
       const currentScrollPosition = window.pageYOffset
-      const currentSectionIndex = Math.round(currentScrollPosition / window.innerHeight)
+      const viewportHeight = window.innerHeight
+      const currentSectionIndex = Math.round(currentScrollPosition / viewportHeight)
       
       console.log('Current scroll position:', currentScrollPosition)
-      console.log('Current section index:', currentSectionIndex)
+      console.log('Viewport height:', viewportHeight)
+      console.log('Calculated section index:', currentSectionIndex)
       console.log('Total sections:', sections.length)
       
-      let nextIndex = currentSectionIndex
+      // More accurate section detection
+      let actualCurrentIndex = 0
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i] as HTMLElement
+        const rect = section.getBoundingClientRect()
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          actualCurrentIndex = i
+          break
+        }
+      }
+      
+      console.log('Actual current section index:', actualCurrentIndex)
+      
+      let nextIndex = actualCurrentIndex
 
       // Determine scroll direction and next section
-      if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+      if (e.deltaY > 0 && actualCurrentIndex < sections.length - 1) {
         // Scrolling down
-        nextIndex = currentSectionIndex + 1
+        nextIndex = actualCurrentIndex + 1
         console.log('Scrolling down to section:', nextIndex)
-      } else if (e.deltaY < 0 && currentSectionIndex > 0) {
+      } else if (e.deltaY < 0 && actualCurrentIndex > 0) {
         // Scrolling up
-        nextIndex = currentSectionIndex - 1
+        nextIndex = actualCurrentIndex - 1
         console.log('Scrolling up to section:', nextIndex)
       } else {
         // Already at first or last section
@@ -50,7 +65,7 @@ export function SmoothWheelScroll() {
         return
       }
 
-      if (nextIndex !== currentSectionIndex) {
+      if (nextIndex !== actualCurrentIndex) {
         // Smooth scroll to next section
         const nextSection = sections[nextIndex] as HTMLElement
         console.log('Scrolling to section:', nextSection)
