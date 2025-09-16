@@ -32,7 +32,7 @@ export function SmoothWheelScroll() {
       const sections = document.querySelectorAll('.snap-section')
       const currentSection = Array.from(sections).find(section => {
         const rect = section.getBoundingClientRect()
-        return rect.top <= 100 && rect.bottom >= 100
+        return rect.top <= 80 && rect.bottom >= 80
       })
 
       if (!currentSection) {
