@@ -100,7 +100,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="glass-button text-sm font-medium py-2 px-3"
+                className="glass-button text-sm font-medium py-2 px-3 font-sans"
               >
                 {item.name}
               </button>
