@@ -45,8 +45,7 @@ export function ServicesSection() {
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <h2 
-            className="font-serif text-4xl md:text-5xl font-bold mb-6"
-            style={{ color: 'oklch(0.95 0.15 85)' }}
+            className="font-serif text-4xl md:text-5xl font-bold mb-6 gold-shimmer-text"
           >
             Nasze Usługi
           </h2>

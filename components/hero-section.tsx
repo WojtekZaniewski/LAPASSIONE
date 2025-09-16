@@ -63,8 +63,7 @@ export function HeroSection() {
         <div className="mb-8">
           <h1 
             ref={titleRef}
-            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0"
-            style={{ color: 'oklch(0.95 0.15 85)' }}
+            className="font-serif text-6xl md:text-8xl font-bold mb-4 text-balance opacity-0 gold-shimmer-text"
           >
             La Passione
           </h1>

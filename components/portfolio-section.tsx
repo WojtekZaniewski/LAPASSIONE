@@ -31,8 +31,7 @@ export function PortfolioSection() {
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">
             <h2 
-              className="font-serif text-4xl md:text-5xl font-bold mb-6"
-              style={{ color: 'oklch(0.95 0.15 85)' }}
+              className="font-serif text-4xl md:text-5xl font-bold mb-6 gold-shimmer-text"
             >
               Portfolio
             </h2>
