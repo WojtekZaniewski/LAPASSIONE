@@ -77,13 +77,15 @@ export function initScrollAnimations() {
 
 // Smooth scroll to element
 export function smoothScrollTo(elementId: string, offset: number = 0) {
-  const element = document.getElementById(elementId)
-  if (element) {
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-    const offsetPosition = elementPosition - offset
+  const sections = document.querySelectorAll('.snap-section')
+  const targetSection = document.getElementById(elementId)
+  
+  if (targetSection) {
+    const sectionIndex = Array.from(sections).indexOf(targetSection)
+    const scrollPosition = sectionIndex * window.innerHeight
 
     window.scrollTo({
-      top: offsetPosition,
+      top: scrollPosition,
       behavior: 'smooth'
     })
   }
