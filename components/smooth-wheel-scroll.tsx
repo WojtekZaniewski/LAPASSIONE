@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 
 export function SmoothWheelScroll() {
   const isScrolling = useRef(false)
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
+  const scrollTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
