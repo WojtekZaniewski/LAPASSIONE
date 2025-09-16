@@ -25,7 +25,7 @@ export function BookingSection() {
   })
 
   return (
-    <section ref={sectionRef} className="py-20 bg-card opacity-0">
+    <section id="booking" ref={sectionRef} className="py-20 bg-card opacity-0">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div ref={headerRef} className="text-center mb-16 opacity-0">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { smoothScrollTo } from "@/lib/scroll-animations"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -18,12 +19,20 @@ export function Navigation() {
   }, [])
 
   const navItems = [
+    { name: "Strona główna", href: "#home" },
     { name: "O nas", href: "#about" },
     { name: "Usługi", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Opinie", href: "#testimonials" },
+    { name: "Rezerwacja", href: "#booking" },
     { name: "Kontakt", href: "#contact" },
   ]
+
+  const handleNavClick = (href: string) => {
+    const sectionId = href.replace('#', '')
+    smoothScrollTo(sectionId, 80) // 80px offset for fixed header
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <nav
@@ -41,17 +50,20 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-white hover:text-secondary transition-colors duration-300 font-medium"
+                onClick={() => handleNavClick(item.href)}
+                className="text-white hover:text-secondary transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
-            <Button className="glass-button">
+            <Button 
+              onClick={() => handleNavClick("#booking")}
+              className="glass-button"
+            >
               Umów wizytę
             </Button>
           </div>
@@ -74,16 +86,18 @@ export function Navigation() {
           <div className="md:hidden glass-container mt-4 p-6 rounded-lg">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-white hover:text-secondary transition-colors duration-300 font-medium py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-white hover:text-secondary transition-colors duration-300 font-medium py-2 text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
-              <Button className="glass-button w-full mt-4">
+              <Button 
+                onClick={() => handleNavClick("#booking")}
+                className="glass-button w-full mt-4"
+              >
                 Umów wizytę
               </Button>
             </div>

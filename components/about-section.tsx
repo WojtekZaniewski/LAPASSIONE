@@ -21,7 +21,7 @@ export function AboutSection() {
   })
 
   return (
-    <section ref={sectionRef} className="py-20 bg-card opacity-0">
+    <section id="about" ref={sectionRef} className="snap-section py-20 bg-card opacity-0 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div ref={textRef} className="opacity-0">

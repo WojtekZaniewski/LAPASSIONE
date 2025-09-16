@@ -26,7 +26,7 @@ export function PortfolioSection() {
   const portfolioRef = useStaggeredAnimation(portfolioImages.length, 100, "zoom-in")
 
   return (
-    <section ref={sectionRef} className="py-20 bg-muted/30 opacity-0">
+    <section id="portfolio" ref={sectionRef} className="snap-section py-20 bg-muted/30 opacity-0 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">
