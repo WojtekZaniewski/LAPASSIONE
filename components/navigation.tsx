@@ -111,7 +111,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Button 
               onClick={() => handleNavClick("#booking")}
-              className="glass-button text-yellow-300 hover:text-yellow-100 text-sm px-4 py-2 border-yellow-400/50"
+              className="glass-button text-yellow-300 hover:text-yellow-100 text-sm px-4 py-2 border-yellow-400/50 font-sans"
             >
               Umów wizytę
             </Button>
