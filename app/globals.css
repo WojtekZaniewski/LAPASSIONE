@@ -936,12 +936,21 @@ nav[class*="glass-nav"] {
 }
 
 .glass-nav-dark {
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+/* Force transparency with higher specificity */
+nav.glass-nav-dark {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+nav[class*="glass-nav-dark"] {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .glass-button {
