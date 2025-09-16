@@ -803,22 +803,19 @@ body {
 
 /* Enhanced floating animations */
 .floating-enhanced {
-  animation: float 6s ease-in-out infinite;
+  /* Removed animation */
 }
 
 .floating-enhanced:nth-child(2) {
-  animation-delay: -1.5s;
-  animation-duration: 8s;
+  /* Removed animation */
 }
 
 .floating-enhanced:nth-child(3) {
-  animation-delay: -3s;
-  animation-duration: 10s;
+  /* Removed animation */
 }
 
 .floating-enhanced:nth-child(4) {
-  animation-delay: -4.5s;
-  animation-duration: 7s;
+  /* Removed animation */
 }
 
 /* Scroll progress indicator */
@@ -1029,7 +1026,6 @@ nav[class*="glass-nav-dark"] {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
 }
 
 .floating-glass:nth-child(2) {
