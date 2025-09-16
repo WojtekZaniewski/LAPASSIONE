@@ -74,7 +74,8 @@ export function Navigation() {
       WebkitBackdropFilter: 'blur(20px)',
       border: '1px solid rgba(255, 255, 255, 0.3)',
       borderRadius: '25px',
-      margin: '20px',
+      margin: '20px auto',
+      maxWidth: '600px',
       boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
     }
   }
@@ -84,29 +85,22 @@ export function Navigation() {
       className={getTaskbarClass()}
       style={getTaskbarStyles()}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="font-serif text-2xl font-bold text-gray-300">
-              La Passione
-            </h1>
-          </div>
-
+      <div className="px-6">
+        <div className="flex items-center justify-center h-12 space-x-8">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10"
+                className="text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10 text-sm"
               >
                 {item.name}
               </button>
             ))}
             <Button 
               onClick={() => handleNavClick("#booking")}
-              className="glass-button text-gray-300 hover:text-white"
+              className="glass-button text-gray-300 hover:text-white text-sm px-4 py-2"
             >
               Umów wizytę
             </Button>
@@ -120,7 +114,7 @@ export function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-300 hover:text-white hover:bg-white/10"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
