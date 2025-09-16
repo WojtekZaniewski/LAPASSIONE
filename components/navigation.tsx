@@ -51,9 +51,7 @@ export function Navigation() {
 
   // Determine glass effect based on current section
   const getGlassClass = () => {
-    if (!isScrolled) return "bg-transparent"
-    
-    // Use dark glass for light sections (services, testimonials, booking)
+    // Always show glass effect, but different types based on section
     const lightSections = ['services', 'testimonials', 'booking']
     if (lightSections.includes(currentSection)) {
       return "glass-nav-dark"
