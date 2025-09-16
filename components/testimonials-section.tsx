@@ -53,7 +53,8 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="glass-card hover:shadow-lg transition-all duration-700 hover:scale-105 opacity-0 p-8"
+              className="glass-card hover:shadow-lg transition-all duration-700 hover:scale-105 opacity-0 p-8 reveal"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="text-secondary text-4xl mb-4 font-serif">"</div>
               <p className="text-muted-foreground mb-6 leading-relaxed italic">{testimonial.text}</p>
