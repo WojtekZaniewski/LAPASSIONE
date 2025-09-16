@@ -30,9 +30,20 @@ export function BookingSection() {
         <div className="max-w-4xl mx-auto">
           <div ref={headerRef} className="text-center mb-16 opacity-0">
             <div className="glass-container p-8 max-w-4xl mx-auto">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-secondary">Rezerwacja Online</h2>
-              <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              <h2 
+                className="font-serif text-4xl md:text-5xl font-bold mb-6"
+                style={{ color: 'oklch(0.95 0.15 85)' }}
+              >
+                Rezerwacja Online
+              </h2>
+              <div 
+                className="w-16 h-px mx-auto mb-6 liquid-wave"
+                style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
+              ></div>
+              <p 
+                className="text-lg max-w-2xl mx-auto text-pretty"
+                style={{ color: 'oklch(0.8 0.1 85)' }}
+              >
                 Zarezerwuj swoją wizytę w La Passione i doświadcz luksusowego fryzjerstwa na najwyższym poziomie.
               </p>
             </div>
@@ -43,20 +54,35 @@ export function BookingSection() {
             className="glass-card shadow-xl hover:shadow-2xl opacity-0 p-8"
           >
             <div className="text-center pb-8">
-              <h3 className="font-serif text-2xl text-secondary">Umów wizytę</h3>
+              <h3 
+                className="font-serif text-2xl"
+                style={{ color: 'oklch(0.9 0.15 85)' }}
+              >
+                Umów wizytę
+              </h3>
             </div>
             <div className="p-8">
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Imię i nazwisko</label>
+                    <label 
+                      className="block text-sm font-medium mb-2"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Imię i nazwisko
+                    </label>
                     <Input
                       placeholder="Wprowadź swoje imię i nazwisko"
                       className="bg-input border-border focus:ring-secondary transition-all duration-300 focus:scale-105"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Telefon</label>
+                    <label 
+                      className="block text-sm font-medium mb-2"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Telefon
+                    </label>
                     <Input
                       placeholder="Wprowadź numer telefonu"
                       className="bg-input border-border focus:ring-secondary transition-all duration-300 focus:scale-105"
@@ -65,7 +91,12 @@ export function BookingSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ color: 'oklch(0.9 0.1 85)' }}
+                  >
+                    Email
+                  </label>
                   <Input
                     type="email"
                     placeholder="Wprowadź adres email"
@@ -75,14 +106,24 @@ export function BookingSection() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Preferowana data</label>
+                    <label 
+                      className="block text-sm font-medium mb-2"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Preferowana data
+                    </label>
                     <Input
                       type="date"
                       className="bg-input border-border focus:ring-secondary transition-all duration-300 focus:scale-105"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Preferowana godzina</label>
+                    <label 
+                      className="block text-sm font-medium mb-2"
+                      style={{ color: 'oklch(0.9 0.1 85)' }}
+                    >
+                      Preferowana godzina
+                    </label>
                     <Input
                       type="time"
                       className="bg-input border-border focus:ring-secondary transition-all duration-300 focus:scale-105"
@@ -91,7 +132,12 @@ export function BookingSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Rodzaj usługi</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ color: 'oklch(0.9 0.1 85)' }}
+                  >
+                    Rodzaj usługi
+                  </label>
                   <select className="w-full p-3 bg-input border border-border rounded-md focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 focus:scale-105">
                     <option>Wybierz usługę</option>
                     <option>Strzyżenie Premium</option>
@@ -102,7 +148,12 @@ export function BookingSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Dodatkowe uwagi</label>
+                  <label 
+                    className="block text-sm font-medium mb-2"
+                    style={{ color: 'oklch(0.9 0.1 85)' }}
+                  >
+                    Dodatkowe uwagi
+                  </label>
                   <Textarea
                     placeholder="Opisz swoje oczekiwania lub specjalne życzenia"
                     className="bg-input border-border focus:ring-secondary min-h-[100px] transition-all duration-300 focus:scale-105"

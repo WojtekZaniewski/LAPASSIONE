@@ -40,9 +40,20 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Opinie Klientów</h2>
-            <div className="w-16 h-px bg-secondary mx-auto mb-6 liquid-wave"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <h2 
+              className="font-serif text-4xl md:text-5xl font-bold mb-6"
+              style={{ color: 'oklch(0.95 0.15 85)' }}
+            >
+              Opinie Klientów
+            </h2>
+            <div 
+              className="w-16 h-px mx-auto mb-6 liquid-wave"
+              style={{ backgroundColor: 'oklch(0.8 0.15 85)' }}
+            ></div>
+            <p 
+              className="text-lg max-w-2xl mx-auto text-pretty"
+              style={{ color: 'oklch(0.8 0.1 85)' }}
+            >
               Poznaj opinie naszych zadowolonych klientów, którzy zaufali naszej ekspertyzie i doświadczeniu w świecie
               luksusowego fryzjerstwa.
             </p>
@@ -56,11 +67,34 @@ export function TestimonialsSection() {
               className="glass-card hover:shadow-lg transition-all duration-700 hover:scale-105 opacity-0 p-8 reveal"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="text-secondary text-4xl mb-4 font-serif">"</div>
-              <p className="text-muted-foreground mb-6 leading-relaxed italic">{testimonial.text}</p>
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold">{testimonial.author}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              <div 
+                className="text-4xl mb-4 font-serif"
+                style={{ color: 'oklch(0.8 0.15 85)' }}
+              >
+                "
+              </div>
+              <p 
+                className="mb-6 leading-relaxed italic"
+                style={{ color: 'oklch(0.8 0.1 85)' }}
+              >
+                {testimonial.text}
+              </p>
+              <div 
+                className="border-t pt-4"
+                style={{ borderColor: 'oklch(0.8 0.15 85 / 0.3)' }}
+              >
+                <p 
+                  className="font-semibold"
+                  style={{ color: 'oklch(0.9 0.1 85)' }}
+                >
+                  {testimonial.author}
+                </p>
+                <p 
+                  className="text-sm"
+                  style={{ color: 'oklch(0.7 0.1 85)' }}
+                >
+                  {testimonial.role}
+                </p>
               </div>
             </div>
           ))}
