@@ -918,12 +918,21 @@ body {
 }
 
 .glass-nav {
-  background: rgba(0, 0, 0, 0.05) !important;
+  background: transparent !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+/* Force transparency with higher specificity */
+nav.glass-nav {
+  background: transparent !important;
+}
+
+nav[class*="glass-nav"] {
+  background: transparent !important;
 }
 
 .glass-nav-dark {
