@@ -55,7 +55,8 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="glass-card group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0 p-8 text-center"
+              className="glass-card group hover:shadow-xl transition-all duration-500 border-border/50 hover:scale-105 opacity-0 p-8 text-center reveal"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="font-serif text-xl font-semibold mb-4 group-hover:text-secondary transition-colors">
                 {service.title}
