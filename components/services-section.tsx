@@ -41,7 +41,7 @@ export function ServicesSection() {
   const servicesRef = useStaggeredAnimation(services.length, 150, "scale-in")
 
   return (
-    <section id="services" ref={sectionRef} className="snap-section min-h-screen w-full bg-background opacity-0 flex items-center justify-center py-20">
+    <section id="services" ref={sectionRef} className="snap-section h-screen w-screen bg-background opacity-0 flex items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Nasze Usługi</h2>
