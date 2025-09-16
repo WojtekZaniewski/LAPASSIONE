@@ -27,34 +27,22 @@ export function SmoothWheelScroll() {
       const sections = document.querySelectorAll('.snap-section')
       const currentScrollPosition = window.pageYOffset
       const viewportHeight = window.innerHeight
+      const currentSectionIndex = Math.round(currentScrollPosition / viewportHeight)
       
       console.log('Current scroll position:', currentScrollPosition)
-      console.log('Viewport height:', viewportHeight)
+      console.log('Current section index:', currentSectionIndex)
       console.log('Total sections:', sections.length)
       
-      // More accurate section detection
-      let actualCurrentIndex = 0
-      for (let i = 0; i < sections.length; i++) {
-        const section = sections[i] as HTMLElement
-        const rect = section.getBoundingClientRect()
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          actualCurrentIndex = i
-          break
-        }
-      }
-      
-      console.log('Actual current section index:', actualCurrentIndex)
-      
-      let nextIndex = actualCurrentIndex
+      let nextIndex = currentSectionIndex
 
       // Determine scroll direction and next section
-      if (e.deltaY > 0 && actualCurrentIndex < sections.length - 1) {
+      if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
         // Scrolling down
-        nextIndex = actualCurrentIndex + 1
+        nextIndex = currentSectionIndex + 1
         console.log('Scrolling down to section:', nextIndex)
-      } else if (e.deltaY < 0 && actualCurrentIndex > 0) {
+      } else if (e.deltaY < 0 && currentSectionIndex > 0) {
         // Scrolling up
-        nextIndex = actualCurrentIndex - 1
+        nextIndex = currentSectionIndex - 1
         console.log('Scrolling up to section:', nextIndex)
       } else {
         // Already at first or last section
@@ -63,7 +51,7 @@ export function SmoothWheelScroll() {
         return
       }
 
-      if (nextIndex !== actualCurrentIndex) {
+      if (nextIndex !== currentSectionIndex) {
         // Smooth scroll to next section
         const nextSection = sections[nextIndex] as HTMLElement
         console.log('Scrolling to section:', nextSection)
@@ -91,12 +79,8 @@ export function SmoothWheelScroll() {
     // Add wheel event listener to document
     document.addEventListener('wheel', handleWheel, { passive: false })
 
-    // Also add to window for better coverage
-    window.addEventListener('wheel', handleWheel, { passive: false })
-
     return () => {
       document.removeEventListener('wheel', handleWheel)
-      window.removeEventListener('wheel', handleWheel)
       if (scrollTimeout.current) {
         clearTimeout(scrollTimeout.current)
       }
