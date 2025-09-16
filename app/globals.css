@@ -619,11 +619,18 @@ body {
 /* Snap scrolling for better wheel navigation */
 html {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .snap-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+/* Alternative wheel scroll handling */
+body {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 /* Prevent default scroll behavior during wheel navigation */

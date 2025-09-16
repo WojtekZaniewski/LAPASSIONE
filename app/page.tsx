@@ -12,7 +12,7 @@ import { ContactSection } from "@/components/contact-section"
 export default function HomePage() {
   useEffect(() => {
     let isScrolling = false
-    let scrollTimeout: NodeJS.Timeout
+    let scrollTimeout: ReturnType<typeof setTimeout>
 
     const handleWheel = (e: WheelEvent) => {
       // Don't interfere with form inputs or buttons
