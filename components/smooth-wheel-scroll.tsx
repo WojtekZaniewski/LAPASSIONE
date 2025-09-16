@@ -59,13 +59,12 @@ export function SmoothWheelScroll() {
       if (nextIndex !== currentIndex) {
         const nextSection = sections[nextIndex] as HTMLElement
         
-        // Smooth scroll to next section with proper offset
-        const headerHeight = 80
-        const elementPosition = nextSection.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - headerHeight
+        // Smooth scroll to next section - exact positioning
+        const sectionIndex = nextIndex
+        const scrollPosition = sectionIndex * window.innerHeight
 
         window.scrollTo({
-          top: offsetPosition,
+          top: scrollPosition,
           behavior: 'smooth'
         })
         
