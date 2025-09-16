@@ -63,22 +63,19 @@ export function Navigation() {
 
   // Force taskbar to always be visible
   const getTaskbarClass = () => {
-    const baseClass = "fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-    const glassClass = getGlassClass()
-    return `${baseClass} ${glassClass}`
+    return "fixed top-0 left-0 right-0 z-50 transition-all duration-300"
   }
 
   // Get dynamic styles based on current section
   const getTaskbarStyles = () => {
-    const lightSections = ['services', 'testimonials', 'booking']
-    const isLightSection = lightSections.includes(currentSection)
-    
     return {
-      background: isLightSection ? 'rgba(0, 0, 0, 0.1)' : 'transparent',
+      background: 'rgba(0, 0, 0, 0.8)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
-      borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+      border: '1px solid rgba(255, 255, 255, 0.3)',
+      borderRadius: '25px',
+      margin: '20px',
+      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
     }
   }
 
@@ -91,7 +88,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="font-serif text-2xl font-bold text-white">
+            <h1 className="font-serif text-2xl font-bold text-gray-300">
               La Passione
             </h1>
           </div>
@@ -102,14 +99,14 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-white hover:text-secondary transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10"
+                className="text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10"
               >
                 {item.name}
               </button>
             ))}
             <Button 
               onClick={() => handleNavClick("#booking")}
-              className="glass-button"
+              className="glass-button text-gray-300 hover:text-white"
             >
               Umów wizytę
             </Button>
@@ -121,7 +118,7 @@ export function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:bg-white/10"
+              className="text-gray-300 hover:text-white hover:bg-white/10"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -136,14 +133,14 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-white hover:text-secondary transition-colors duration-300 font-medium py-2 text-left"
+                  className="text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2 text-left"
                 >
                   {item.name}
                 </button>
               ))}
               <Button 
                 onClick={() => handleNavClick("#booking")}
-                className="glass-button w-full mt-4"
+                className="glass-button text-gray-300 hover:text-white w-full mt-4"
               >
                 Umów wizytę
               </Button>
