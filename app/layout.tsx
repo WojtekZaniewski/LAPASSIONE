@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pl" className="scroll-smooth">
+    <html lang="pl">
       <body className={`font-sans ${inter.variable} ${crimsonText.variable} antialiased relative`}>
         {/* Background glass elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
