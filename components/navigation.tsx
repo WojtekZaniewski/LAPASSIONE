@@ -89,7 +89,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="font-medium text-xl gold-shimmer-text">
+            <h1 className="glass-button text-sm font-medium py-2 px-3">
               Strona główna
             </h1>
           </div>
