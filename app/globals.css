@@ -935,6 +935,15 @@ nav[class*="glass-nav"] {
   background: transparent !important;
 }
 
+/* Even more specific selectors */
+.fixed.top-0.left-0.right-0.z-50.glass-nav {
+  background: transparent !important;
+}
+
+.fixed.top-0.left-0.right-0.z-50.glass-nav-dark {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
 .glass-nav-dark {
   background: rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(20px);
