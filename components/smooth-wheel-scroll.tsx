@@ -32,29 +32,20 @@ export function SmoothWheelScroll() {
       console.log('Viewport height:', viewportHeight)
       console.log('Total sections:', sections.length)
       
-      // More accurate section detection
-      let actualCurrentIndex = 0
-      for (let i = 0; i < sections.length; i++) {
-        const section = sections[i] as HTMLElement
-        const rect = section.getBoundingClientRect()
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          actualCurrentIndex = i
-          break
-        }
-      }
+      // Simple section detection based on scroll position
+      const currentSectionIndex = Math.round(currentScrollPosition / viewportHeight)
+      console.log('Current section index:', currentSectionIndex)
       
-      console.log('Actual current section index:', actualCurrentIndex)
-      
-      let nextIndex = actualCurrentIndex
+      let nextIndex = currentSectionIndex
 
       // Determine scroll direction and next section
-      if (e.deltaY > 0 && actualCurrentIndex < sections.length - 1) {
+      if (e.deltaY > 0 && currentSectionIndex < sections.length - 1) {
         // Scrolling down
-        nextIndex = actualCurrentIndex + 1
+        nextIndex = currentSectionIndex + 1
         console.log('Scrolling down to section:', nextIndex)
-      } else if (e.deltaY < 0 && actualCurrentIndex > 0) {
+      } else if (e.deltaY < 0 && currentSectionIndex > 0) {
         // Scrolling up
-        nextIndex = actualCurrentIndex - 1
+        nextIndex = currentSectionIndex - 1
         console.log('Scrolling up to section:', nextIndex)
       } else {
         // Already at first or last section
@@ -63,20 +54,17 @@ export function SmoothWheelScroll() {
         return
       }
 
-      if (nextIndex !== actualCurrentIndex) {
+      if (nextIndex !== currentSectionIndex) {
         // Smooth scroll to next section
         const nextSection = sections[nextIndex] as HTMLElement
         console.log('Scrolling to section:', nextSection)
         console.log('Section ID:', nextSection.id)
 
         if (nextSection) {
-          const elementPosition = nextSection.offsetTop
-          const headerHeight = 80
-          const offsetPosition = elementPosition - headerHeight
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
+          // Use scrollIntoView for more reliable scrolling
+          nextSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
           })
         }
       }
