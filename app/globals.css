@@ -442,7 +442,8 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 0px; /* Remove padding to prevent overlap */
+  scroll-padding-top: 0px;
+  overflow-x: hidden;
 }
 
 /* Enhanced smooth scrolling for wheel events */
