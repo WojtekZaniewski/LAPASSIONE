@@ -36,7 +36,7 @@ export function TestimonialsSection() {
   const testimonialsRef = useStaggeredAnimation(testimonials.length, 200, "bounce-in")
 
   return (
-    <section id="testimonials" ref={sectionRef} className="snap-section h-screen w-full bg-background opacity-0 flex items-center justify-center">
+    <section id="testimonials" ref={sectionRef} className="snap-section min-h-screen w-full bg-background opacity-0 flex items-center justify-center py-20">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className="text-center mb-16 opacity-0">
           <div className="glass-container p-8 max-w-4xl mx-auto">

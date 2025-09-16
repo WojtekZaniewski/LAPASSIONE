@@ -35,7 +35,7 @@ export function HeroSection() {
   })
 
   return (
-    <section id="home" className="snap-section relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="home" className="snap-section relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with parallax effect */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
