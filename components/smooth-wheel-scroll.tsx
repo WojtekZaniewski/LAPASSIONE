@@ -27,11 +27,9 @@ export function SmoothWheelScroll() {
       const sections = document.querySelectorAll('.snap-section')
       const currentScrollPosition = window.pageYOffset
       const viewportHeight = window.innerHeight
-      const currentSectionIndex = Math.round(currentScrollPosition / viewportHeight)
       
       console.log('Current scroll position:', currentScrollPosition)
       console.log('Viewport height:', viewportHeight)
-      console.log('Calculated section index:', currentSectionIndex)
       console.log('Total sections:', sections.length)
       
       // More accurate section detection
@@ -72,9 +70,13 @@ export function SmoothWheelScroll() {
         console.log('Section ID:', nextSection.id)
 
         if (nextSection) {
-          nextSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          const elementPosition = nextSection.offsetTop
+          const headerHeight = 80
+          const offsetPosition = elementPosition - headerHeight
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
           })
         }
       }

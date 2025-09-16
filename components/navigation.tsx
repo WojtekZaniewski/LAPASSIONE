@@ -8,10 +8,26 @@ import { smoothScrollTo } from "@/lib/scroll-animations"
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [currentSection, setCurrentSection] = useState('home')
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+      
+      // Detect current section
+      const sections = document.querySelectorAll('.snap-section')
+      const scrollPosition = window.scrollY + 100
+      
+      sections.forEach((section) => {
+        const element = section as HTMLElement
+        const rect = element.getBoundingClientRect()
+        const sectionTop = rect.top + window.scrollY
+        const sectionBottom = sectionTop + element.offsetHeight
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setCurrentSection(element.id)
+        }
+      })
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -33,11 +49,23 @@ export function Navigation() {
     setIsMobileMenuOpen(false)
   }
 
+  // Determine glass effect based on current section
+  const getGlassClass = () => {
+    if (!isScrolled) return "bg-transparent"
+    
+    // Use dark glass for light sections (services, testimonials, booking)
+    const lightSections = ['services', 'testimonials', 'booking']
+    if (lightSections.includes(currentSection)) {
+      return "glass-nav-dark"
+    }
+    
+    // Use light glass for dark sections (home, portfolio, contact)
+    return "glass-nav"
+  }
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${getGlassClass()}`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
