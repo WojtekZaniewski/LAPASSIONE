@@ -138,14 +138,14 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className="glass-button font-medium py-2 text-left w-full"
+                  className="glass-button font-medium py-2 text-left w-full font-sans"
                 >
                   {item.name}
                 </button>
               ))}
               <Button 
                 onClick={() => handleNavClick("#booking")}
-                className="glass-button w-full mt-4"
+                className="glass-button w-full mt-4 font-sans"
               >
                 Umów wizytę
               </Button>
