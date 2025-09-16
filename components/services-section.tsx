@@ -69,8 +69,7 @@ export function ServicesSection() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 
-                className="font-serif text-lg font-semibold mb-3 transition-colors"
-                style={{ color: 'oklch(0.9 0.1 85)' }}
+                className="font-serif text-lg font-semibold mb-3 transition-colors gold-shimmer-text"
               >
                 {service.title}
               </h3>
@@ -81,8 +80,7 @@ export function ServicesSection() {
                 {service.description}
               </p>
               <div 
-                className="font-semibold text-base"
-                style={{ color: 'oklch(0.8 0.15 85)' }}
+                className="font-semibold text-base gold-shimmer-text"
               >
                 {service.price}
               </div>
