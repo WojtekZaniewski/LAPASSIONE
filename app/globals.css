@@ -1036,14 +1036,7 @@ nav[class*="glass-nav-dark"] {
   /* Removed animation */
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-  }
-}
+/* Removed float animation */
 
 /* Glass morphism text */
 .glass-text {
@@ -1081,14 +1074,7 @@ nav[class*="glass-nav-dark"] {
   );
 }
 
-@keyframes wave {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+/* Removed wave animation */
 
 /* Glass container with liquid effect */
 .glass-container {
@@ -1121,14 +1107,7 @@ nav[class*="glass-nav-dark"] {
   opacity: 0.3;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+/* Removed rotate animation */
 
 @keyframes metallic-shimmer {
   0% {
