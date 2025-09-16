@@ -22,7 +22,7 @@ export function ContactSection() {
   })
 
   return (
-    <section id="contact" ref={sectionRef} className="snap-section min-h-screen w-full bg-primary text-primary-foreground opacity-0 flex items-center justify-center py-20">
+    <section id="contact" ref={sectionRef} className="snap-section h-screen w-screen bg-primary text-primary-foreground opacity-0 flex items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16">
           <div ref={infoRef} className="opacity-0">
