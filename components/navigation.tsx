@@ -20,7 +20,6 @@ export function Navigation() {
 
   const navItems = [
     { name: "Strona główna", href: "#home" },
-    { name: "O nas", href: "#about" },
     { name: "Usługi", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Opinie", href: "#testimonials" },

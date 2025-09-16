@@ -35,7 +35,7 @@ export function HeroSection() {
   })
 
   return (
-    <section id="home" className="snap-section relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="snap-section relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with parallax effect */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
@@ -102,7 +102,7 @@ export function HeroSection() {
       {/* Enhanced scroll indicator */}
       <button 
         ref={scrollRef}
-        onClick={() => smoothScrollTo("about", 80)}
+        onClick={() => smoothScrollTo("services", 80)}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-0 hover:scale-110 transition-transform duration-300"
       >
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center hover:border-secondary transition-colors duration-300">
