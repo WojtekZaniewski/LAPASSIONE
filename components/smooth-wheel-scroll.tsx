@@ -30,17 +30,16 @@ export function SmoothWheelScroll() {
       }
       
       const sections = document.querySelectorAll('.snap-section')
-      const currentSection = Array.from(sections).find(section => {
-        const rect = section.getBoundingClientRect()
-        return rect.top <= 80 && rect.bottom >= 80
-      })
+      const currentScrollPosition = window.pageYOffset
+      const currentSectionIndex = Math.round(currentScrollPosition / window.innerHeight)
+      const currentSection = sections[currentSectionIndex]
 
       if (!currentSection) {
         isScrolling.current = false
         return
       }
 
-      const currentIndex = Array.from(sections).indexOf(currentSection)
+      const currentIndex = currentSectionIndex
       let nextIndex = currentIndex
 
       // Determine scroll direction and next section
